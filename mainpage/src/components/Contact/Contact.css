@@ -1,0 +1,112 @@
+.Contact {
+  grid-area: Contact;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  padding: 2rem;
+  height: auto;
+  background-color: var(--color-claro);
+}
+
+.Contact-left {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.Contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.Contact-boton {
+  display: block;
+  margin: 0.5rem auto;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.Contact-boton:hover {
+  background-color: var(--color-secundario-hover);
+}
+
+.Contact-boton.whatsapp {
+  background-color: var(--color-whatsapp);
+}
+
+.Contact-boton.whatsapp:hover {
+  background-color: var(--color-whatsapp-hover);
+}
+
+.Contact-right {
+  background-color: var(--color-blanco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.Contact-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Contact-form input,
+.Contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-input-borde);
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.Contact-form button {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Contact-form button:hover {
+  background-color: var(--color-primario-hover);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .Contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Contact-left,
+  .Contact-right {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .Contact-boton {
+    width: 100%;
+  }
+}

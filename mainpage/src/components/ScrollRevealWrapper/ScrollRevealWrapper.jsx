@@ -1,4 +1,4 @@
-import useRevealOnScroll from '../Hooks/useRevealOnScroll';
+import useRevealOnScroll from '../../Hooks/useRevealOnScroll';
 
 const ScrollRevealWrapper = ({ children }) => {
   const [ref, visible] = useRevealOnScroll();

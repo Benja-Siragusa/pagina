@@ -1,0 +1,82 @@
+.Packs {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+  background-color: var(--color-claro);
+}
+
+.fila-superior {
+  grid-column: 1 / 4;
+  background-color: var(--color-header);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.packs-header {
+  max-width: 800px;
+  text-align: center;
+}
+
+.packs-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.packs-header p {
+  font-size: 1.1rem;
+  color: var(--color-texto);
+}
+
+.Packs1, .Packs2, .Packs3 {
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-blanco);
+}
+
+.Packs1 {
+  background-color: var(--color-pack-1);
+}
+
+.Packs2 {
+  background-color: var(--color-pack-2);
+}
+
+.Packs3 {
+  background-color: var(--color-pack-3);
+  color: var(--color-pack-3-text);
+}
+
+.Packs1 h3, .Packs2 h3, .Packs3 h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.Packs1 ul, .Packs2 ul, .Packs3 ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.Packs1 li, .Packs2 li, .Packs3 li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .Packs {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .fila-superior {
+    grid-column: auto;
+  }
+}

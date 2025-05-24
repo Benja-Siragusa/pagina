@@ -1,0 +1,91 @@
+.TopBar {
+  grid-area: TopBar;
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  height: 12vh;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+.TopBar-logo {
+  background-color: var(--color-blanco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--color-negro);
+}
+
+.TopBar-resto {
+  background-color: var(--color-secundario-hover); /* puedes ajustar o quitar esto */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+
+.TopBar-nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.TopBar-nav a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.TopBar-nav a:hover {
+  color: var(--color-dorado);
+}
+
+.TopBar-cta {
+  background-color: var(--color-secundario);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  color: var(--color-blanco);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.TopBar-cta:hover {
+  background-color: var(--color-secundario-hover);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .TopBar {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .TopBar-logo {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .TopBar-resto {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .TopBar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .TopBar-cta {
+    align-self: stretch;
+    text-align: center;
+  }
+}
