@@ -1,0 +1,290 @@
+:root {
+  --color-principal: #60b5ff;
+  --color-secundario: #afddff;
+  --color-terciario: #ffecdb;
+  --color-quaternario: #ff9149;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+/*accesorios*/
+
+.reveal {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.espaciados {
+  margin: 1.1rem; 
+}
+
+/* secciones */
+
+section > div {
+  height: 100%;
+  max-width: 100%;
+  
+}
+
+.main-grid {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-areas:
+    "TopBar"
+    "Introduccion"
+    "Hero"
+    "Features"
+    "Gallery"
+    "Packs"
+    "About"
+    "Contact";
+}
+
+/* TopBar */
+
+.TopBar {
+  grid-area: TopBar;
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  height: 12vh;
+}
+
+.TopBar-logo {
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TopBar-resto {
+  background-color: rgb(255, 0, 76);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Introduccion */
+
+.Introduccion {
+  grid-area: Introduccion;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  box-sizing: border-box;
+  height: 30vh;
+  width: 100%;
+  padding: 0 1.1rem; /* espacio interno en los laterales */
+}
+
+.Introduccion1 {
+  background-color: #d7bc85;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0; /* espacio interno en los laterales */
+}
+
+.Introduccion2 {
+  background-color: #96d2b0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ width: 100%;
+  padding: 0; /* espacio interno en los laterales */
+}
+
+/* Hero */
+
+.Hero {
+  grid-area: Hero;
+  display: grid;
+  grid-template-columns: 2.7fr 1.3fr;
+  height: 70vh;
+}
+
+.Hero-left {
+  background-color: #ff6666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Hero-right {
+  background-color: #66ccff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Features */
+
+.Features {
+  grid-area: Features;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  height: 60vh;
+}
+
+.Features-left {
+  background-color: #6669ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Features-right {
+  background-color: #d1ff66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Gallery */
+
+.Gallery {
+  grid-area: Gallery;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 60vh;
+}
+
+.Gallery1 {
+  background-color: #405313;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Gallery2 {
+  background-color: #09acbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Gallery3 {
+  background-color: #405313;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Gallery4 {
+  background-color: #09acbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Packs */
+
+.Packs {
+  display: grid;
+  height: 60vh; /* o lo que quieras */
+  grid-template-rows: 25% 75%;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.fila-superior {
+  grid-column: 1 / 4;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Packs1 {
+  background-color: #2466d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Packs2 {
+  background-color: #d24a24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Packs3 {
+  background-color: #d2cf24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* About */
+
+.About {
+  grid-area: About;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  height: 60vh;
+}
+
+.About-left {
+  background-color: #ff66fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.About-right {
+  background-color: #61615f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact */
+
+.Contact {
+  grid-area: Contact;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 60vh;
+}
+
+.Contact-left {
+  background-color: #e3ff66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contact-right {
+  background-color: #0d86ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
